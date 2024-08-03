@@ -63,13 +63,14 @@
   color: rgb(163, 25, 25);
   transition: 0.3s ease;
   padding: 10px 10px;
-  border: 1px solid rgb(163, 25, 25); /* Ajouter une bordure */
-  border-radius: 5px; /* Ajouter des coins arrondis */
+  border: 1px solid; /* Ajouter une bordure */
+ border-radius: 5px; /* Ajouter des coins arrondis */
+ background-color: #7bba4f;
 }
 
 .header ul li a:hover {
   color: #7bba4f;
-  border-color: #7bba4f; /* Changer la couleur de la bordure au survol */
+  background-color: brown; /* Changer la couleur de la bordure au survol */
 }
 
 /* Style principal */
@@ -179,7 +180,7 @@
     max-width: 100px;
   }
   .header h1 {
-    font-size: 25px;
+    font-size: 20px;
     padding: 20px;
     text-align: center;
   }
