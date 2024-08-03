@@ -1,25 +1,36 @@
+/* Réinitialisation de base */
 * {
   margin: 0;
   padding: 0;
-  font-family: Arial;
-  border-radius: 1%;
-  box-sizing: border-box; /* ajouté pour prendre en compte les bordures et les padding dans les dimensions */
+  font-family: Arial, sans-serif;
+  box-sizing: border-box; /* Prendre en compte les bordures et les marges dans les dimensions */
 }
 
+/* Style de l'en-tête */
 .header {
   background-color: #f0f0f0;
   padding: 20px;
   text-align: center;
+  background-image: url(co.jpg);
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.header .logo img {
+  border-radius: 10%;
+  float: left;
 }
 
 .header h1 {
   color: rgb(163, 25, 25);
   font-size: 60px;
-  padding: 60px;
-  animation: text 3s 1;
+  padding: 60px 20px;
+  animation: texte 3s 1;
+  display: inline-block;
 }
-
-@keyframes text {
+@keyframes texte {
   0% {
     color: black;
     margin-bottom: -40px;
@@ -30,53 +41,49 @@
   }
 }
 
-.header img {
-  float: left;
-  border-radius: 20px;
-  max-width: 100%; /* ajouté pour que les images ne dépassent pas de leur conteneur */
-  height: auto; /* ajouté pour conserver le ratio d'aspect des images */
+
+.header ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0;
+  list-style: none;
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }
 
-.nav {
-  overflow: hidden;
-  background-image: url(co.jpg);
-  text-align: center;
-  list-style-type: none;
-  text-decoration: none;
-  width: 100%;
+.header ul li {
+  margin-left: 10px; /* Espace entre les éléments de la liste */
 }
 
-.nav li {
-  color: rgb(163, 25, 25);
-  margin-top: 30px;
+.header ul li a {
   text-decoration: none;
-}
-
-.line {
-  text-decoration: none;
-  font-size: 50px;
+  font-size: 20px;
   color: rgb(163, 25, 25);
   transition: 0.3s ease;
+  padding: 10px 20px;
+  border: 1px solid rgb(163, 25, 25); /* Ajouter une bordure */
+  border-radius: 5px; /* Ajouter des coins arrondis */
 }
 
-.line:hover {
+.header ul li a:hover {
   color: #7bba4f;
+  border-color: #7bba4f; /* Changer la couleur de la bordure au survol */
 }
 
-.main {
-  padding: 20px;
-  text-align: center;
-  color: rgb(128, 174, 116);
-  background-position: center;
-  background-size: cover;
-}
-
-.main h1 {
-  color: #9b6464;
+/* Style principal */
+.main h2 {
+  color: rgb(163, 25, 25);
   font-size: 50px;
+  padding: 20px;
 }
 
-.button a {
+.main .section {
+  padding: 20px;
+}
+
+.bouton a {
   transition: 0.3s ease;
 }
 
@@ -84,6 +91,7 @@
   background-color: white;
 }
 
+/* Style de la galerie d'images */
 .image-row {
   display: flex;
   flex-wrap: wrap;
@@ -93,27 +101,11 @@
 .image-row img {
   width: 25%;
   margin: 10px;
-  max-width: 100%; /* ajouté pour que les images ne dépassent pas de leur conteneur */
-  height: auto; /* ajouté pour conserver le ratio d'aspect des images */
+  max-width: 100%; /* Pour que les images ne dépassent pas de leur conteneur */
+  height: auto; /* Pour conserver le ratio d'aspect des images */
 }
 
-.logo img {
-  background-color: white;
-}
-
-h2 {
-  font-size: 50px;
-}
-.retour{
-    background-color: rgb(161, 75, 75);
-    color: rgb(14, 13, 13);
-  }
-  .retour:hover{
-    background-color: #7bba4f;
-      color: brown;
-  }
-
-
+/* Style du pied de page */
 .footer {
   background-color: #ad8484;
   text-align: center;
@@ -123,32 +115,67 @@ h2 {
 
 .icon a {
   color: #0e0c0c;
+  margin: 0 10px;
+  font-size: 24px;
 }
 
-/* Media queries pour les écrans de taille moyenne et petite */
+/* Media queries pour les écrans de taille moyenne */
 @media (max-width: 768px) {
-  .container {
-    flex-direction: column;
+  .header h1 {
+    font-size: 40px;
+    padding: 30px;
   }
-  .news {
-    margin-left: 0;
-    margin-top: 20px;
+  .header ul {
+    flex-direction: column;
+    position: static; /* Positionner normalement pour les écrans de taille moyenne */
+    margin-top: 20px; /* Ajouter un espace au-dessus */
+  }
+  .header ul li {
+    margin: 10px 0;
+  }
+  .header ul li a {
+    font-size: 30px;
+  }
+  .main h2 {
+    font-size: 40px;
+    text-align: center;
   }
   .image-row img {
-    width: 50%; /* ajusté pour les écrans de taille moyenne */
+    width: 50%;
   }
 }
 
+/* Media queries pour les petits écrans */
 @media (max-width: 480px) {
-  .nav ul li {
+  .header .logo img {
+    float: none;
     display: block;
-    text-align: left;
+    margin: 0 auto;
+    max-width: 100px;
   }
-  .nav ul li a {
-    display: block;
-    padding: 10px;
+  .header h1 {
+    font-size: 30px;
+    padding: 20px;
+    text-align: center;
+  }
+  .header ul {
+    padding: 5px;
+    position: static; /* Positionner normalement pour les petits écrans */
+    margin-top: 40px; /* Ajouter un espace au-dessus */
+  }
+  .header ul li {
+    margin: 5px 0;
+    margin-top: 30px 20 ;
+  }
+  .header ul li a {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+  .main h2 {
+    font-size: 30px;
+    text-align: center;
   }
   .image-row img {
-    width: 100%; /* ajusté pour les petits écrans */
+    width: 100%;
   }
 }

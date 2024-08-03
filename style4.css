@@ -1,0 +1,117 @@
+/* Réinitialisation de base */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box; /* Prendre en compte les bordures et les marges dans les dimensions */
+}
+
+/* Style de l'en-tête */
+.header {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.header .logo img {
+    border-radius: 10%;
+}
+
+.header h1 {
+    color: rgb(163, 25, 25);
+    font-size: 60px;
+    padding: 60px 20px;
+    display: inline-block;
+}
+
+/* Style principal */
+.main h2 {
+    color: #9b6464;
+    font-size: 50px;
+    padding: 20px;
+}
+
+.main .section {
+    padding: 20px;
+}
+
+.image-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.image-row img {
+    width: 30%; /* Ajustez le pourcentage en fonction de votre mise en page souhaitée */
+    height: auto; /* Conserver le ratio d'aspect */
+    margin: 10px;
+}
+
+/* Style du pied de page */
+.footer {
+    background-color: #ad8484;
+    text-align: center;
+    color: #070606;
+    padding: 30px;
+}
+
+.icon a {
+    color: #0e0c0c;
+    margin: 0 10px;
+    font-size: 24px;
+}
+
+/* Media queries pour les écrans de taille moyenne */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 40px;
+        padding: 30px;
+    }
+    .header ul {
+        flex-direction: column;
+    }
+    .header ul li {
+        margin: 10px 0;
+    }
+    .header ul li a {
+        font-size: 30px;
+    }
+    .main h2 {
+        font-size: 40px;
+    }
+    .image-row img {
+        width: 45%;
+    }
+}
+
+/* Media queries pour les petits écrans */
+@media (max-width: 480px) {
+    .header .logo img {
+        float: none;
+        display: block;
+        margin: 0 auto;
+        max-width: 100px;
+    }
+    .header h1 {
+        font-size: 30px;
+        padding: 20px;
+    }
+    .header ul {
+        padding: 5px;
+    }
+    .header ul li {
+        margin: 5px 0;
+    }
+    .header ul li a {
+        font-size: 20px;
+    }
+    .main h2 {
+        font-size: 30px;
+    }
+    .image-row img {
+        width: 100%;
+    }
+}
