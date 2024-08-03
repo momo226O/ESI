@@ -30,6 +30,7 @@
   animation: texte 3s 1;
   display: inline-block;
 }
+
 @keyframes texte {
   0% {
     color: black;
@@ -41,7 +42,6 @@
   }
 }
 
-
 .header ul {
   display: flex;
   justify-content: center;
@@ -49,7 +49,7 @@
   padding: 0;
   list-style: none;
   position: absolute;
-  top: 20px;
+  top: 30px;
   right: 20px;
 }
 
@@ -62,7 +62,7 @@
   font-size: 20px;
   color: rgb(163, 25, 25);
   transition: 0.3s ease;
-  padding: 10px 20px;
+  padding: 10px 10px;
   border: 1px solid rgb(163, 25, 25); /* Ajouter une bordure */
   border-radius: 5px; /* Ajouter des coins arrondis */
 }
@@ -81,6 +81,10 @@
 
 .main .section {
   padding: 20px;
+}
+
+.main .section p {
+  font-size: 30px;
 }
 
 .bouton a {
@@ -103,6 +107,27 @@
   margin: 10px;
   max-width: 100%; /* Pour que les images ne dépassent pas de leur conteneur */
   height: auto; /* Pour conserver le ratio d'aspect des images */
+}
+
+.retour {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.retour a {
+  border: 1px solid;
+  background-color: rgb(65, 133, 53);
+  border-radius: 10px;
+  font-size: 30px;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.retour a:hover {
+  background-color: #7bba4f;
+  color: white;
 }
 
 /* Style du pied de page */
@@ -146,7 +171,7 @@
 }
 
 /* Media queries pour les petits écrans */
-@media (max-width: 480px) {
+@media (max-width: 490px) {
   .header .logo img {
     float: none;
     display: block;
@@ -154,22 +179,23 @@
     max-width: 100px;
   }
   .header h1 {
-    font-size: 30px;
+    font-size: 25px;
     padding: 20px;
     text-align: center;
   }
   .header ul {
-    padding: 5px;
+    padding: 2px;
     position: static; /* Positionner normalement pour les petits écrans */
-    margin-top: 40px; /* Ajouter un espace au-dessus */
+    margin-top: 7px; /* Ajouter un espace au-dessus */
   }
   .header ul li {
-    margin: 5px 0;
-    margin-top: 30px 20 ;
+    margin: 5px 5px; /* Assurer un espacement suffisant */
   }
   .header ul li a {
-    font-size: 20px;
-    margin-top: 10px;
+    font-size: 15px;
+    margin: 7px 0; /* Ajouter de l'espacement vertical entre les liens */
+    display: block; /* Chaque lien prend toute la largeur disponible */
+    text-align: center; /* Centrer le texte des liens */
   }
   .main h2 {
     font-size: 30px;

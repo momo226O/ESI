@@ -109,8 +109,8 @@
 .image-row img {
   width: 25%;
   margin: 10px;
-  max-width: 100%; /* Pour que les images ne dépassent pas de leur conteneur */
-  height: auto; /* Pour conserver le ratio d'aspect des images */
+  max-width: 100%; 
+  height: auto; 
 }
 
 /* Style du pied de page */
@@ -165,7 +165,15 @@
   .header ul li a {
       font-size: 20px;
   }
+.main p{
+  width: 100%;
+margin:2px;
+display: inline;
+}
   .main h3, .nav h4, .nav h5 {
       font-size: 30px;
+  }
+  .image-row img {
+    width: 100%;
   }
 }
