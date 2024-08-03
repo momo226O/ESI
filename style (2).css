@@ -1,145 +1,154 @@
 * {
-    margin: 0;
-    padding: 0;
-    font-family: Arial;
-    border-radius: 1%;
-    box-sizing: border-box; /* ajouté pour prendre en compte les bordures et les padding dans les dimensions */
+  margin: 0;
+  padding: 0;
+  font-family: Arial;
+  border-radius: 1%;
+  box-sizing: border-box; /* ajouté pour prendre en compte les bordures et les padding dans les dimensions */
+}
+
+.header {
+  background-color: #f0f0f0;
+  padding: 20px;
+  text-align: center;
+}
+
+.header h1 {
+  color: rgb(163, 25, 25);
+  font-size: 60px;
+  padding: 60px;
+  animation: text 3s 1;
+}
+
+@keyframes text {
+  0% {
+    color: black;
+    margin-bottom: -40px;
   }
-  
-  .header {
-    background-color: #f0f0f0;
-    padding: 20px;
-    text-align: center;
+  30% {
+    letter-spacing: 25px;
+    margin-bottom: -80px;
   }
-  
-  .header h1 {
-    color: rgb(163, 25, 25);
-    font-size: 60px;
-    padding: 60px;
-    animation: text 3s 1;
+}
+
+.header img {
+  float: left;
+  border-radius: 20px;
+  max-width: 100%; /* ajouté pour que les images ne dépassent pas de leur conteneur */
+  height: auto; /* ajouté pour conserver le ratio d'aspect des images */
+}
+
+.nav {
+  overflow: hidden;
+  background-image: url(co.jpg);
+  text-align: center;
+  list-style-type: none;
+  text-decoration: none;
+  width: 100%;
+}
+
+.nav li {
+  color: rgb(163, 25, 25);
+  margin-top: 30px;
+  text-decoration: none;
+}
+
+.line {
+  text-decoration: none;
+  font-size: 50px;
+  color: rgb(163, 25, 25);
+  transition: 0.3s ease;
+}
+
+.line:hover {
+  color: #7bba4f;
+}
+
+.main {
+  padding: 20px;
+  text-align: center;
+  color: rgb(128, 174, 116);
+  background-position: center;
+  background-size: cover;
+}
+
+.main h1 {
+  color: #9b6464;
+  font-size: 50px;
+}
+
+.button a {
+  transition: 0.3s ease;
+}
+
+.a:hover {
+  background-color: white;
+}
+
+.image-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.image-row img {
+  width: 25%;
+  margin: 10px;
+  max-width: 100%; /* ajouté pour que les images ne dépassent pas de leur conteneur */
+  height: auto; /* ajouté pour conserver le ratio d'aspect des images */
+}
+
+.logo img {
+  background-color: white;
+}
+
+h2 {
+  font-size: 50px;
+}
+.retour{
+    background-color: rgb(161, 75, 75);
+    color: rgb(14, 13, 13);
   }
-  
-  @keyframes text {
-    0% {
-      color: black;
-      margin-bottom: -40px;
-    }
-    30% {
-      letter-spacing: 25px;
-      margin-bottom: -80px;
-    }
+  .retour:hover{
+    background-color: #7bba4f;
+      color: brown;
   }
-  
-  .header img {
-    float: left;
-    border-radius: 20px;
-    max-width: 100%; /* ajouté pour que les images ne dépassent pas de leur conteneur */
-    height: auto; /* ajouté pour conserver le ratio d'aspect des images */
+
+
+.footer {
+  background-color: #ad8484;
+  text-align: center;
+  color: #070606;
+  padding: 30px;
+}
+
+.icon a {
+  color: #0e0c0c;
+}
+
+/* Media queries pour les écrans de taille moyenne et petite */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
   }
-  
-  .nav {
-    overflow: hidden;
-    background-image: url(co.jpg);
-    text-align: center;
-    list-style-type: none;
-    text-decoration: none;
-    width: 100%;
+  .news {
+    margin-left: 0;
+    margin-top: 20px;
   }
-  
-  .nav li {
-    color: rgb(163, 25, 25);
-    margin-top: 30px;
-    text-decoration: none;
-  }
-  
-  .line {
-    text-decoration: none;
-    font-size: 50px;
-    color: rgb(163, 25, 25);
-    transition: 0.3s ease;
-  }
-  
-  .line:hover {
-    color: #7bba4f;
-  }
-  
-  .main {
-    padding: 20px;
-    text-align: center;
-    color: rgb(128, 174, 116);
-    background-position: center;
-    background-size: cover;
-  }
-  
-  .main h1 {
-    color: #9b6464;
-    font-size: 50px;
-  }
-  
-  .button a {
-    transition: 0.3s ease;
-  }
-  
-  .a:hover {
-    background-color: white;
-  }
-  
-  .image-row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-  
   .image-row img {
-    width: 25%;
-    margin: 10px;
-    max-width: 100%; /* ajouté pour que les images ne dépassent pas de leur conteneur */
-    height: auto; /* ajouté pour conserver le ratio d'aspect des images */
+    width: 50%; /* ajusté pour les écrans de taille moyenne */
   }
-  
-  .logo img {
-    background-color: white;
+}
+
+@media (max-width: 480px) {
+  .nav ul li {
+    display: block;
+    text-align: left;
   }
-  
-  h2 {
-    font-size: 50px;
+  .nav ul li a {
+    display: block;
+    padding: 10px;
   }
-  
-  .footer {
-    background-color: #ad8484;
-    text-align: center;
-    color: #070606;
-    padding: 30px;
+  .image-row img {
+    width: 100%; /* ajusté pour les petits écrans */
   }
-  
-  .icon a {
-    color: #0e0c0c;
-  }
-  
-  /* Media queries pour les écrans de taille moyenne et petite */
-  @media (max-width: 768px) {
-    .container {
-      flex-direction: column;
-    }
-    .news {
-      margin-left: 0;
-      margin-top: 20px;
-    }
-    .image-row img {
-      width: 50%; /* ajusté pour les écrans de taille moyenne */
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .nav ul li {
-      display: block;
-      text-align: left;
-    }
-    .nav ul li a {
-      display: block;
-      padding: 10px;
-    }
-    .image-row img {
-      width: 100%; /* ajusté pour les petits écrans */
-    }
-  }
+}
