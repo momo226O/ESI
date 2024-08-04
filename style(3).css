@@ -5,7 +5,8 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; /* Prendre en compte les bordures et les marges dans les dimensions */
+  box-sizing: border-box; 
+  border-radius: 10px;
 }
 
 /* Style de l'en-tête */
