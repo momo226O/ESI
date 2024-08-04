@@ -86,6 +86,7 @@
 
 .main .section p {
   font-size: 30px;
+  text-align: center;
 }
 
 .bouton a {
@@ -178,9 +179,10 @@
     display: block;
     margin: 0 auto;
     max-width: 90px;
+    height: 80px;
   }
   .header h1 {
-    font-size: 25px;
+    font-size: 22px;
     padding: 20px;
     text-align: center;
   }
@@ -201,6 +203,9 @@
   .main h2 {
     font-size: 25px;
     text-align: center;
+  }
+  .main p{
+    font-size: 15px;
   }
   .image-row img {
     width: 100%;
