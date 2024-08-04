@@ -11,8 +11,8 @@
   background-color: #f0f0f0;
   padding: 20px;
   text-align: center;
-  background-image: url(co.jpg);
-  height: 500px;
+  background-image: url(inf.jpg);
+  height: 700px;
   background-size: cover;
   background-position: center;
   position: relative;
@@ -59,18 +59,16 @@
 
 .header ul li a {
   text-decoration: none;
-  font-size: 20px;
+  font-size: 25px;
   color: rgb(163, 25, 25);
   transition: 0.3s ease;
   padding: 10px 10px;
   border: 1px solid; /* Ajouter une bordure */
  border-radius: 5px; /* Ajouter des coins arrondis */
- background-color: #7bba4f;
 }
-
 .header ul li a:hover {
   color: #7bba4f;
-  background-color: brown; /* Changer la couleur de la bordure au survol */
+  /*background-color: brown;  Changer la couleur de la bordure au survol */
 }
 
 /* Style principal */
@@ -180,6 +178,10 @@
     margin: 0 auto;
     max-width: 90px;
     height: 80px;
+  }
+  .header{
+    width: 100%;
+    height: 400px;
   }
   .header h1 {
     font-size: 22px;
