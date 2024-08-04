@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  box-sizing: border-box; 
+  box-sizing: border-box; /* Prendre en compte les bordures et les marges dans les dimensions */
 }
 
 /* Style de l'en-tête */
@@ -54,7 +54,7 @@
 }
 
 .header ul li {
-  margin-left: 10px; 
+  margin-left: 10px; /* Espace entre les éléments de la liste */
 }
 
 .header ul li a {
@@ -63,8 +63,8 @@
   color: rgb(163, 25, 25);
   transition: 0.3s ease;
   padding: 10px 10px;
-  border: 1px solid; 
- border-radius: 5px; 
+  border: 1px solid; /* Ajouter une bordure */
+ border-radius: 5px; /* Ajouter des coins arrondis */
 }
 .header ul li a:hover {
   color: #7bba4f;
@@ -105,8 +105,8 @@
 .image-row img {
   width: 25%;
   margin: 10px;
-  max-width: 100%; 
-  height: auto; 
+  max-width: 100%; /* Pour que les images ne dépassent pas de leur conteneur */
+  height: auto; /* Pour conserver le ratio d'aspect des images */
 }
 
 .retour {
@@ -152,8 +152,8 @@
   }
   .header ul {
     flex-direction: column;
-    position: static; 
-    margin-top: 20px; 
+    position: static; /* Positionner normalement pour les écrans de taille moyenne */
+    margin-top: 20px; /* Ajouter un espace au-dessus */
   }
   .header ul li {
     margin: 10px 0;
@@ -177,7 +177,7 @@
     display: block;
     margin: 0 auto;
     max-width: 90px;
-    height: 70px;
+    height: 80px;
   }
   .header{
     width: 100%;
@@ -190,18 +190,18 @@
   }
   .header ul {
     padding: 2px;
-    position: static; 
-    margin-top: 7px; 
+    position: static; /* Positionner normalement pour les petits écrans */
+    margin-top: 7px; /* Ajouter un espace au-dessus */
   }
   .header ul li {
-    margin: 5px 5px; 
+    margin: 5px 5px; /* Assurer un espacement suffisant */
+  }
   .header ul li a {
     font-size: 15px;
-    margin: 7px 0; 
-    display: block; 
-    text-align: center; 
+    margin: 7px 0; /* Ajouter de l'espacement vertical entre les liens */
+    display: block; /* Chaque lien prend toute la largeur disponible */
+    text-align: center; /* Centrer le texte des liens */
   }
-}
   .main h2 {
     font-size: 25px;
     text-align: center;
